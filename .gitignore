@@ -33,7 +33,3 @@ yarn-error.log*
 # Uploads
 uploads/
 temp/
-node_modules/
-.env
-dist/
-build/
