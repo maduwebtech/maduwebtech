@@ -1,0 +1,38 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-light text-gray-800 font-sans;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-display font-bold;
+  }
+}
+
+/* Ensure text is visible on dark backgrounds */
+.bg-dark, .bg-darker, .bg-gradient-to-r {
+  @apply text-white;
+}
+.bg-dark h1, .bg-dark h2, .bg-dark h3, .bg-dark h4, .bg-dark h5, .bg-dark h6,
+.bg-darker h1, .bg-darker h2, .bg-darker h3, .bg-darker h4, .bg-darker h5, .bg-darker h6 {
+  @apply text-white;
+}
+
+@layer components {
+  .btn-primary {
+    @apply bg-primary text-white px-6 py-3 rounded-lg font-semibold hover:opacity-90 transition-all;
+  }
+  .btn-secondary {
+    @apply bg-dark text-white px-6 py-3 rounded-lg font-semibold hover:bg-darker transition-all;
+  }
+  .card {
+    @apply bg-white rounded-xl shadow-sm hover:shadow-lg transition-all duration-300;
+  }
+}
+
+/* Quill Editor Styles */
+.ql-editor {
+  min-height: 300px;
+}
